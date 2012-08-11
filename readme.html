@@ -1,0 +1,1351 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Tagāti Book G</title>
+	<style type="text/css" media="screen, print">
+	
+	@font-face {
+		font-family: tagati-book-g;
+		src: url("Tagati Book Regular G.ttf");
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: tagati-book-g;
+		src: url("Tagati Book Italic G.ttf");
+		font-style: italic;
+	}
+	
+	html {
+		padding: 2em;
+	}
+	
+	body {
+		max-width: 40em;
+		margin: 0 auto;
+		font-family: serif;
+	}
+	
+	h2, h3 {
+		margin-top: 2em;
+	}
+		
+	p, li {
+		line-height: 150%;
+	}
+	
+	tt {
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 80%;
+		padding: 0.25em 0.25em;
+		margin: 0 0.1em;
+		background: #e6e6e6;
+		border: 2px #ccc outset;
+		min-width: 1em;
+		line-height: 100%;
+		text-align: center;
+		vertical-align: middle;
+		display: inline-block;
+	}
+	
+	.header {
+		text-align: center;
+	}
+	
+	.body p {
+		text-align: justify;
+		margin: 0;
+	}
+	
+	.body p + p {
+		text-indent: 2em;
+	}
+	
+	blockquote p + p {
+		text-indent: 0 !important;
+	}
+	
+	table {
+		border: 0;
+		margin: 1em 0;
+		padding: 0;
+		width: 100%;
+	}
+	
+	table th,
+	table td {
+		border-bottom: 1px solid #ccc;
+		padding: 0 0.25em;
+		vertical-align: middle;
+	}
+	
+	table tr:nth-child(2n+1) {
+		background: #e6e6e6;
+	}
+	
+	table.charset td:nth-child(1),
+	table.key-macros td:nth-child(2) {
+		text-align: center;
+		font-family: tagati-book-g, "Tagati Book G";
+		font-size: 200%;
+		width: 1em;
+	}
+	
+	table.charset td:nth-child(2) {
+		text-align: center;
+		font-family: tagati-book-g, "Tagati Book G";
+		font-size: 200%;
+		width: 1em;
+		font-style: italic;
+	}
+	
+	table.charset td:nth-child(3) {
+		text-align: center;
+		text-transform: uppercase;
+		width: 5em;
+	}
+	
+	table.charset td:nth-child(4) {
+		text-align: left;
+		text-transform: uppercase;
+	}
+	
+	table.charset td:nth-child(5) {
+		text-align: center;
+		width: 5em;
+	}
+	
+	table.charset td:nth-child(6) {
+		text-align: center;
+		width: 10em;
+	}
+	
+	table.key-macros td:nth-child(1) {
+		text-align: center;
+	}
+	
+	table.key-macros td:nth-child(3) {
+		padding-left: 1em;
+		border-left: 1px solid #ccc;
+	}
+	
+	.tagatibookg {
+		font-family: tagati-book-g, "Tagati Book G";
+		font-size: 125%;
+		line-height: 0;
+		padding: 0 0.25em;
+	}
+	
+	blockquote.example .tagatibookg {
+		font-size: 200%;
+		line-height: 200%;
+	}
+	
+	.x {
+		display: none;
+		color: #fff;
+	}
+	
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<h1>Tagāti Book G</h1>
+		<p><strong>A Font for the <a href="http://benung.nfshost.com/alphabet" target="_blank">Tahano Hikamu</a> Writing System Enabled with <a href="http://graphite.sil.org" target="_blank">SIL Graphite</a></strong></p>
+		<p>Carsten Becker, 11 August 2012<br />
+		<em>christianus<span class="x">_blah_</span>&#x002E;<span class="x">_all_this_obfuscation_tsk_tsk_</span>pistorius<span class="x">_removethis_</span>&#x0040;<span class="x">_and_this_too_</span>gmail<span class="x">_this_as_well_</span>&#x002E;<span class="x">_removethis_</span>com</em><br />
+		 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" taget="_blank">CC-BY-NC-SA 3.0 License</a></p>
+	</div>
+	<hr />
+	
+	<div class="body">
+		<h2 id="purpose">1. Purpose</h2>
+		<p>This is a True Type font for my fictional writing system <span class="tagatibookg">thno hikmu</span> <em>Tahano Hikamu</em>, which was inspired by writing systems of the Asian subcontinent, especially Brahmic scripts. I made the font in order to be able to typeset things in my script on the computer as well so that it would not be necessary to use pen, paper, and a scanner every time I want to produce something digital in it.</p>
+		<p><em>Tagāti Book G</em> has been released under a Creative Commons license that grants you a lot of freedom because according to my own experience, people involved in the fictional language community on the internet are always very curious about how to make fonts for their own fictional languages and their respective writing systems. Since font-making is a very complex task, I hope to provide a useful insight into how I made this font by fully disclosing its sources. My own design and coding are certainly far from perfect, so if there is anything to improve or optimize, you're invited to help correcting those issues.</p>
+		<p><em>Tahano Hikamu</em> is a very complex script even for a Brahmic-inspired <em>abugida</em> in that there is a lot of diacritic stacking and character reordering involved, occasionally also against the primary left-to-right writing direction. The decision to program those complex features into the TTF files with Graphite was made because earlier attempts with just OpenType – which is far more widespread – were unsatisfying, since it would be too restricted in its support of features, especially for a fictional script that is not just a mere rip-off of an existing one.</p>
+		
+		<h2 id="charset">2. Character Set</h2>
+		<p><em>Tagāti Book G</em> (ab)uses much of the “Latin-1” area in Unicode to make input with a regular Western keyboard as easy as possible. How the script works is described in detail at <a href="http://benung.nfshost.com/alphabet" target="_blank">Benung. The Ayeri Language Resource.</a> The following charts give the characters in both <em>hikamu</em> ‘round’ (Regular) and <em>hinyan</em> ‘angular’ (Italic) style – if you have the fonts installed or can dynamically load them from your browser.</p>
+		
+		<h3 id="consonants">2.1. Consonants</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x002a;</td>
+			<td>&#x002a;</td>
+			<td>u+002a</td>
+			<td>Dummy Consonant</td>
+			<td>&#x002a;</td>
+			<td><tt>*</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0043;</td>
+			<td>&#x0043;</td>
+			<td>u+0043</td>
+			<td>Ayeri Supplemental Letter Cha</td>
+			<td>&#x0043;</td>
+			<td><tt>C</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0047;</td>
+			<td>&#x0047;</td>
+			<td>u+0047</td>
+			<td>Ayeri Supplemental Letter Gha</td>
+			<td>&#x0047;</td>
+			<td><tt>G</tt></td>
+		</tr>
+		<tr>
+			<td>&#x004e;</td>
+			<td>&#x004e;</td>
+			<td>u+004e</td>
+			<td>Ayeri Letter Nga</td>
+			<td>&#x004e;</td>
+			<td><tt>N</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0053;</td>
+			<td>&#x0053;</td>
+			<td>u+0053</td>
+			<td>Ayeri Supplemental Letter Sha</td>
+			<td>&#x0053;</td>
+			<td><tt>S</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0054;</td>
+			<td>&#x0054;</td>
+			<td>u+0054</td>
+			<td>Ayeri Supplemental Letter Tsa</td>
+			<td>&#x0054;</td>
+			<td><tt>T</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0058;</td>
+			<td>&#x0058;</td>
+			<td>u+0058</td>
+			<td>Ayeri Supplemental Letter Kha</td>
+			<td>&#x0058;</td>
+			<td><tt>X</tt></td>
+		</tr>
+		<tr>
+			<td>&#x005a;</td>
+			<td>&#x005a;</td>
+			<td>u+005a</td>
+			<td>Ayeri Supplemental Letter Zha</td>
+			<td>&#x005a;</td>
+			<td><tt>Z</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0062;</td>
+			<td>&#x0062;</td>
+			<td>u+0062</td>
+			<td>Ayeri Letter Ba</td>
+			<td>&#x0062;</td>
+			<td><tt>b</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0064;</td>
+			<td>&#x0064;</td>
+			<td>u+0064</td>
+			<td>Ayeri Letter Da</td>
+			<td>&#x0064;</td>
+			<td><tt>d</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0066;</td>
+			<td>&#x0066;</td>
+			<td>u+0066</td>
+			<td>Ayeri Supplemental Letter Fa</td>
+			<td>&#x0066;</td>
+			<td><tt>f</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0067;</td>
+			<td>&#x0067;</td>
+			<td>u+0067</td>
+			<td>Ayeri Letter Ga</td>
+			<td>&#x0067;</td>
+			<td><tt>g</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0068;</td>
+			<td>&#x0068;</td>
+			<td>u+0068</td>
+			<td>Ayeri Letter Ha</td>
+			<td>&#x0068;</td>
+			<td><tt>h</tt></td>
+		</tr>
+		<tr>
+			<td>&#x006b;</td>
+			<td>&#x006b;</td>
+			<td>u+006b</td>
+			<td>Ayeri Letter Ka</td>
+			<td>&#x006b;</td>
+			<td><tt>k</tt></td>
+		</tr>
+		<tr>
+			<td>&#x006c;</td>
+			<td>&#x006c;</td>
+			<td>u+006c</td>
+			<td>Ayeri Letter La</td>
+			<td>&#x006c;</td>
+			<td><tt>l</tt></td>
+		</tr>
+		<tr>
+			<td>&#x006d;</td>
+			<td>&#x006d;</td>
+			<td>u+006d</td>
+			<td>Ayeri Letter Ma</td>
+			<td>&#x006d;</td>
+			<td><tt>m</tt></td>
+		</tr>
+		<tr>
+			<td>&#x006e;</td>
+			<td>&#x006e;</td>
+			<td>u+006e</td>
+			<td>Ayeri Letter Na</td>
+			<td>&#x006e;</td>
+			<td><tt>n</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0070;</td>
+			<td>&#x0070;</td>
+			<td>u+0070</td>
+			<td>Ayeri Letter Pa</td>
+			<td>&#x0070;</td>
+			<td><tt>p</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0071;</td>
+			<td>&#x0071;</td>
+			<td>u+0071</td>
+			<td>Ayeri Supplemental Letter Kwa</td>
+			<td>&#x0071;</td>
+			<td><tt>q</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0072;</td>
+			<td>&#x0072;</td>
+			<td>u+0072</td>
+			<td>Ayeri Letter Ra</td>
+			<td>&#x0072;</td>
+			<td><tt>r</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0073;</td>
+			<td>&#x0073;</td>
+			<td>u+0073</td>
+			<td>Ayeri Letter Sa</td>
+			<td>&#x0073;</td>
+			<td><tt>s</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0074;</td>
+			<td>&#x0074;</td>
+			<td>u+0074</td>
+			<td>Ayeri Letter Ta</td>
+			<td>&#x0074;</td>
+			<td><tt>t</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0076;</td>
+			<td>&#x0076;</td>
+			<td>u+0076</td>
+			<td>Ayeri Letter Va</td>
+			<td>&#x0076;</td>
+			<td><tt>v</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0077;</td>
+			<td>&#x0077;</td>
+			<td>u+0077</td>
+			<td>Ayeri Supplemental Letter Wa</td>
+			<td>&#x0077;</td>
+			<td><tt>w</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0078;</td>
+			<td>&#x0078;</td>
+			<td>u+0078</td>
+			<td>Ayeri Supplemental Letter Ksa</td>
+			<td>&#x0078;</td>
+			<td><tt>x</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0079;</td>
+			<td>&#x0079;</td>
+			<td>u+0079</td>
+			<td>Ayeri Letter Ya</td>
+			<td>&#x0079;</td>
+			<td><tt>y</tt></td>
+		</tr>
+		<tr>
+			<td>&#x007a;</td>
+			<td>&#x007a;</td>
+			<td>u+007a</td>
+			<td>Ayeri Supplemental Letter Za</td>
+			<td>&#x007a;</td>
+			<td><tt>z</tt></td>
+		</tr>
+		<tr>
+			<td>&#x00d1;</td>
+			<td>&#x00d1;</td>
+			<td>u+00d1</td>
+			<td>Ayeri Letter Short Na</td>
+			<td>&#x00d1;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x00f1;</td>
+			<td>&#x00f1;</td>
+			<td>u+00f1</td>
+			<td>Ayeri Letter Ligated Na</td>
+			<td>&#x00f1;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x0294;</td>
+			<td>&#x0294;</td>
+			<td>u+0294</td>
+			<td>Ayeri Letter Glottal Stop and Vowel Carrier</td>
+			<td>&#x0294;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</table>
+		
+		<h3 id="top-vowels">2.2. Top Vowels</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0061;</td>
+			<td>&#x0061;</td>
+			<td>u+0061</td>
+			<td>Ayeri Top Vowel A</td>
+			<td>&#x0061;</td>
+			<td><tt>a</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0065;</td>
+			<td>&#x0065;</td>
+			<td>u+0065</td>
+			<td>Ayeri Top Vowel E</td>
+			<td>&#x0065;</td>
+			<td><tt>e</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0069;</td>
+			<td>&#x0069;</td>
+			<td>u+0069</td>
+			<td>Ayeri Top Vowel I</td>
+			<td>&#x0069;</td>
+			<td><tt>i</tt></td>
+		</tr>
+		<tr>
+			<td>&#x006f;</td>
+			<td>&#x006f;</td>
+			<td>u+006f</td>
+			<td>Ayeri Top Vowel O</td>
+			<td>&#x006f;</td>
+			<td><tt>o</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0075;</td>
+			<td>&#x0075;</td>
+			<td>u+0075</td>
+			<td>Ayeri Top Vowel U</td>
+			<td>&#x0075;</td>
+			<td><tt>u</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0259;</td>
+			<td>&#x0259;</td>
+			<td>u+0259</td>
+			<td>Ayeri Vowel Top Schwa</td>
+			<td>&#x0259;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#xa737;</td>
+			<td>&#xa737;</td>
+			<td>u+a737</td>
+			<td>Ayeri Top Vowel Au</td>
+			<td>&#xa737;</td>
+			<td><tt>a</tt><tt>u</tt></td>
+		</tr>
+		</table>
+		
+		<h3 id="bottom-vowels">2.3. Bottom Vowels</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0300;</td>
+			<td>&#x0300;</td>
+			<td>u+0300</td>
+			<td>Ayeri Bottom Vowel A</td>
+			<td>&#x0300;</td>
+			<td><tt>_</tt><tt>a</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0301;</td>
+			<td>&#x0301;</td>
+			<td>u+0301</td>
+			<td>Ayeri Bottom Vowel E</td>
+			<td>&#x0301;</td>
+			<td><tt>_</tt><tt>e</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0302;</td>
+			<td>&#x0302;</td>
+			<td>u+0302</td>
+			<td>Ayeri Bottom Vowel I</td>
+			<td>&#x0302;</td>
+			<td><tt>_</tt><tt>i</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0303;</td>
+			<td>&#x0303;</td>
+			<td>u+0303</td>
+			<td>Ayeri Bottom Vowel O</td>
+			<td>&#x0303;</td>
+			<td><tt>_</tt><tt>o</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0304;</td>
+			<td>&#x0304;</td>
+			<td>u+0304</td>
+			<td>Ayeri Bottom Vowel U</td>
+			<td>&#x0304;</td>
+			<td><tt>_</tt><tt>u</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0305;</td>
+			<td>&#x0305;</td>
+			<td>u+0305</td>
+			<td>Ayeri Bottom Vowel Schwa</td>
+			<td>&#x0305;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x0306;</td>
+			<td>&#x0306;</td>
+			<td>u+0306</td>
+			<td>Ayeri Bottom Vowel Au</td>
+			<td>&#x0306;</td>
+			<td><tt>_</tt><tt>a</tt><tt>u</tt></td>
+		</tr>
+		</table>
+		
+		<h3 id="initial-vowels">2.4. Initial Vowels</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0041;</td>
+			<td>&#x0041;</td>
+			<td>u+0041</td>
+			<td>Ayeri Initial Vowel A</td>
+			<td>&#x0041;</td>
+			<td><tt>A</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0045;</td>
+			<td>&#x0045;</td>
+			<td>u+0045</td>
+			<td>Ayeri Initial Vowel E</td>
+			<td>&#x0045;</td>
+			<td><tt>E</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0049;</td>
+			<td>&#x0049;</td>
+			<td>u+0049</td>
+			<td>Ayeri Initial Vowel I</td>
+			<td>&#x0049;</td>
+			<td><tt>I</tt></td>
+		</tr>
+		<tr>
+			<td>&#x004f;</td>
+			<td>&#x004f;</td>
+			<td>u+004f</td>
+			<td>Ayeri Initial Vowel O</td>
+			<td>&#x004f;</td>
+			<td><tt>O</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0055;</td>
+			<td>&#x0055;</td>
+			<td>u+0055</td>
+			<td>Ayeri Initial Vowel U</td>
+			<td>&#x0055;</td>
+			<td><tt>U</tt></td>
+		</tr>
+		<tr>
+			<td>&#x018f;</td>
+			<td>&#x018f;</td>
+			<td>u+018f</td>
+			<td>Ayeri Vowel Initial Schwa</td>
+			<td>&#x018f;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#xa736;</td>
+			<td>&#xa736;</td>
+			<td>u+a736</td>
+			<td>Ayeri Initial Vowel Au</td>
+			<td>&#xa736;</td>
+			<td><tt>A</tt><tt>U</tt></td>
+		</tr>
+		</table>
+		
+		<h3 id="bottom-diacritics">2.5. Bottom Diacritics</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0046;</td>
+			<td>&#x0046;</td>
+			<td>u+0046</td>
+			<td>Ayeri Silent Vowel Mark Bottom</td>
+			<td>&#x0046;</td>
+			<td><tt>F</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0048;</td>
+			<td>&#x0048;</td>
+			<td>u+0048</td>
+			<td>Ayeri Aspiration Mark Bottom</td>
+			<td>&#x0048;</td>
+			<td><tt>H</tt></td>
+		</tr>
+		<tr>
+			<td>&#x004a;</td>
+			<td>&#x004a;</td>
+			<td>u+004a</td>
+			<td>Ayeri Palatalization Mark Bottom</td>
+			<td>&#x004a;</td>
+			<td><tt>J</tt></td>
+		</tr>
+		<tr>
+			<td>&#x004d;</td>
+			<td>&#x004d;</td>
+			<td>u+004d</td>
+			<td>Ayeri Nasalization Mark Bottom</td>
+			<td>&#x004d;</td>
+			<td><tt>M</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0059;</td>
+			<td>&#x0059;</td>
+			<td>u+0059</td>
+			<td>Ayeri Syllalbe-Final Ya Bottom</td>
+			<td>&#x0059;</td>
+			<td><tt>Y</tt></tt></td>
+		</tr>
+		<tr>
+			<td>&#x00af;</td>
+			<td>&#x00af;</td>
+			<td>u+00af</td>
+			<td>Ayeri Long Vowel Mark Bottom</td>
+			<td>&#x00af;</td>
+			<td><tt>VOWEL</tt><tt>VOWEL</tt></td>
+		</tr>
+		<tr>
+			<td>&#x02c0;</td>
+			<td>&#x02c0;</td>
+			<td>u+02c0</td>
+			<td>Ayeri Glottal Stop Mark Bottom</td>
+			<td>&#x02c0;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x0313;</td>
+			<td>&#x0313;</td>
+			<td>u+0313</td>
+			<td>Ayeri Gemination Sign Bottom</td>
+			<td>&#x0313;</td>
+			<td><tt>CONS</tt><tt>F</tt><tt>CONS</tt></td>
+		</tr>
+		</table>
+		
+		<h3 id="top-diacritics">2.6. Top Diacritics</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0051;</td>
+			<td>&#x0051;</td>
+			<td>u+0051</td>
+			<td>Ayeri Glottal Stop Mark Top</td>
+			<td>&#x0051;</td>
+			<td><tt>Q</tt></td>
+		</tr>
+		<tr>
+			<td>&#x00a8;</td>
+			<td>&#x00a8;</td>
+			<td>u+00a8</td>
+			<td>Ayeri Systematic Vowel Modification Mark</td>
+			<td>&#x00a8;</td>
+			<td><tt>_</tt><tt>:</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0310;</td>
+			<td>&#x0310;</td>
+			<td>u+0310</td>
+			<td>Ayeri Nasalization Mark Top</td>
+			<td>&#x0310;</td>
+			<td><tt>_</tt><tt>M</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0311;</td>
+			<td>&#x0311;</td>
+			<td>u+0311</td>
+			<td>Ayeri Silent Vowel Mark Top</td>
+			<td>&#x0311;</td>
+			<td><tt>_</tt><tt>F</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0314;</td>
+			<td>&#x0314;</td>
+			<td>u+0314</td>
+			<td>Ayeri Gemination Sign Top</td>
+			<td>&#x0314;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</table>
+		
+		<h3 id="pre-diacritics">2.7. Pre-Diacritics</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0052;</td>
+			<td>&#x0052;</td>
+			<td>u+0052</td>
+			<td>Ayeri Retroflex Mark</td>
+			<td>&#x0052;</td>
+			<td><tt>R</tt></td>
+		</tr>
+		<tr>
+			<td>&#x006a;</td>
+			<td>&#x006a;</td>
+			<td>u+006a</td>
+			<td>Ayeri Rising Diphthong Mark</td>
+			<td>&#x006a;</td>
+			<td><tt>j</tt></td>
+		</tr>
+		<tr>
+			<td>&#x02b0;</td>
+			<td>&#x02b0;</td>
+			<td>u+02b0</td>
+			<td>Ayeri Aspiration Mark Pre</td>
+			<td>&#x02b0;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x02b2;</td>
+			<td>&#x02b2;</td>
+			<td>u+02b2</td>
+			<td>Ayeri Palatalization and Syllable-Final YA Mark Pre</td>
+			<td>&#x02b2;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x02d0;</td>
+			<td>&#x02d0;</td>
+			<td>u+02d0</td>
+			<td>Ayeri Long Vowel Mark Pre</td>
+			<td>&#x02d0;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</table>
+		
+		<h3 id="numbers">2.8. Numbers</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0030;</td>
+			<td>&#x0030;</td>
+			<td>u+0030</td>
+			<td>Zero</td>
+			<td>&#x0030;</td>
+			<td><tt>0</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0031;</td>
+			<td>&#x0031;</td>
+			<td>u+0031</td>
+			<td>One</td>
+			<td>&#x0031;</td>
+			<td><tt>1</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0032;</td>
+			<td>&#x0032;</td>
+			<td>u+0032</td>
+			<td>Two</td>
+			<td>&#x0032;</td>
+			<td><tt>2</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0033;</td>
+			<td>&#x0033;</td>
+			<td>u+0033</td>
+			<td>Three</td>
+			<td>&#x0033;</td>
+			<td><tt>3</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0034;</td>
+			<td>&#x0034;</td>
+			<td>u+0034</td>
+			<td>Four</td>
+			<td>&#x0034;</td>
+			<td><tt>4</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0035;</td>
+			<td>&#x0035;</td>
+			<td>u+0035</td>
+			<td>Five</td>
+			<td>&#x0035;</td>
+			<td><tt>5</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0036;</td>
+			<td>&#x0036;</td>
+			<td>u+0036</td>
+			<td>Six</td>
+			<td>&#x0036;</td>
+			<td><tt>6</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0037;</td>
+			<td>&#x0037;</td>
+			<td>u+0037</td>
+			<td>Seven</td>
+			<td>&#x0037;</td>
+			<td><tt>7</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0038;</td>
+			<td>&#x0038;</td>
+			<td>u+0038</td>
+			<td>Eight</td>
+			<td>&#x0038;</td>
+			<td><tt>8</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0039;</td>
+			<td>&#x0039;</td>
+			<td>u+0039</td>
+			<td>Nine</td>
+			<td>&#x0039;</td>
+			<td><tt>9</tt></td>
+		</tr>
+		<tr>
+			<td>&#x00b9;</td>
+			<td>&#x00b9;</td>
+			<td>u+00b9</td>
+			<td>Ten</td>
+			<td>&#x00b9;</td>
+			<td><tt>¹</tt></td>
+		</tr>
+		<tr>
+			<td>&#x00b2;</td>
+			<td>&#x00b2;</td>
+			<td>u+00b2</td>
+			<td>Eleven</td>
+			<td>&#x00b2;</td>
+			<td><tt>²</tt></td>
+		</tr>
+		</table>
+		
+		<h3 id="punctuation">2.9. Punctuation</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>u+0020</td>
+			<td>Space</td>
+			<td>&nbsp;</td>
+			<td><tt>SPACE</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0021;</td>
+			<td>&#x0021;</td>
+			<td>u+0021</td>
+			<td>Exclamation mark</td>
+			<td>&#x0021;</td>
+			<td><tt>!</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0022;</td>
+			<td>&#x0022;</td>
+			<td>u+0022</td>
+			<td>Quotation mark</td>
+			<td>&#x0022;</td>
+			<td><tt>"</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0027;</td>
+			<td>&#x0027;</td>
+			<td>u+0027</td>
+			<td>Ayeri Divider Mark (Dash, Apostrophe)</td>
+			<td>&#x0027;</td>
+			<td><tt>'</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0028;</td>
+			<td>&#x0028;</td>
+			<td>u+0028</td>
+			<td>Left Parenthesis</td>
+			<td>&#x0028;</td>
+			<td><tt>(</tt></td>
+		</tr>
+		<tr>
+			<td>&#x0029;</td>
+			<td>&#x0029;</td>
+			<td>u+0029</td>
+			<td>Right Parenthesis</td>
+			<td>&#x0029;</td>
+			<td><tt>)</tt></td>
+		</tr>
+		<tr>
+			<td>&#x002c;</td>
+			<td>&#x002c;</td>
+			<td>u+002c</td>
+			<td>Ayeri Wide Syntactic Space (Comma)</td>
+			<td>&#x002c;</td>
+			<td><tt>,</tt></td>
+		</tr>
+		<tr>
+			<td>&#x002d;</td>
+			<td>&#x002d;</td>
+			<td>u+002d</td>
+			<td>Simple Dash</td>
+			<td>&#x002d;</td>
+			<td><tt>-</tt></td>
+		</tr>
+		<tr>
+			<td>&#x002e;</td>
+			<td>&#x002e;</td>
+			<td>u+002e</td>
+			<td>Full Stop</td>
+			<td>&#x002e;</td>
+			<td><tt>.</tt></td>
+		</tr>
+		<tr>
+			<td>&#x002f;</td>
+			<td>&#x002f;</td>
+			<td>u+002f</td>
+			<td>Ayeri Divider Mark</td>
+			<td>&#x002f;</td>
+			<td><tt>/</tt></td>
+		</tr>
+		<tr>
+			<td>&#x003a;</td>
+			<td>&#x003a;</td>
+			<td>u+003a</td>
+			<td>Simple Dash</td>
+			<td>&#x003a;</td>
+			<td><tt>:</tt></td>
+		</tr>
+		<tr>
+			<td>&#x003b;</td>
+			<td>&#x003b;</td>
+			<td>u+003b</td>
+			<td>Simple Dash</td>
+			<td>&#x003b;</td>
+			<td><tt>;</tt></td>
+		</tr>
+		<tr>
+			<td>&#x003f;</td>
+			<td>&#x003f;</td>
+			<td>u+003f</td>
+			<td>Question Mark</td>
+			<td>&#x003f;</td>
+			<td><tt>?</tt></td>
+		</tr>
+		<tr>
+			<td>&#x005b;</td>
+			<td>&#x005b;</td>
+			<td>u+005b</td>
+			<td>Ayeri Left Name Mark</td>
+			<td>&#x005b;</td>
+			<td><tt>[</tt></td>
+		</tr>
+		<tr>
+			<td>&#x005d;</td>
+			<td>&#x005d;</td>
+			<td>u+005d</td>
+			<td>Ayeri Right Name Mark Bottom</td>
+			<td>&#x005d;</td>
+			<td><tt>]</tt></td>
+		</tr>
+		<tr>
+			<td>&#x005f;</td>
+			<td>&#x005f;</td>
+			<td>u+005f</td>
+			<td>Low Line</td>
+			<td>&#x005f;</td>
+			<td><tt>_</tt></td>
+		</tr>
+		<tr>
+			<td>&#x00b6;</td>
+			<td>&#x00b6;</td>
+			<td>u+00b6</td>
+			<td>Ayeri Line-End Mark</td>
+			<td>&#x00b6;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x00b7;</td>
+			<td>&#x00b7;</td>
+			<td>u+00b7</td>
+			<td>Ayeri Decimal Point</td>
+			<td>&#x00b7;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x0312;</td>
+			<td>&#x0312;</td>
+			<td>u+0312</td>
+			<td>Ayeri Silent Vowel Mark Post</td>
+			<td>&#x0312;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x0315;</td>
+			<td>&#x0315;</td>
+			<td>u+0315</td>
+			<td>Ayeri Right Name Mark Top</td>
+			<td>&#x0315;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x200b;</td>
+			<td>&#x200b;</td>
+			<td>u+200b</td>
+			<td>Zero Width Space</td>
+			<td>&#x200b;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x200c;</td>
+			<td>&#x200c;</td>
+			<td>u+200c</td>
+			<td>Zero Width Non-Joiner</td>
+			<td>&#x200c;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x2010;</td>
+			<td>&#x2010;</td>
+			<td>u+2010</td>
+			<td>Ayeri Simple Dash</td>
+			<td>&#x2010;</td>
+			<td><tt>-</tt></td>
+		</tr>
+		<tr>
+			<td>&#x2011;</td>
+			<td>&#x2011;</td>
+			<td>u+2011</td>
+			<td>Ayeri Simple Dash (non-breaking)</td>
+			<td>&#x2011;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x2012;</td>
+			<td>&#x2012;</td>
+			<td>u+2012</td>
+			<td>Ayeri Simple Dash</td>
+			<td>&#x2012;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x2013;</td>
+			<td>&#x2013;</td>
+			<td>u+2013</td>
+			<td>EN Dash</td>
+			<td>&#x2013;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x2014;</td>
+			<td>&#x2014;</td>
+			<td>u+2014</td>
+			<td>EM Dash</td>
+			<td>&#x2014;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x2019;</td>
+			<td>&#x2019;</td>
+			<td>u+2019</td>
+			<td>Ayeri Divider Mark (Dash, Apostrophe)</td>
+			<td>&#x2019;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x201c;</td>
+			<td>&#x201c;</td>
+			<td>u+201c</td>
+			<td>Ayeri Left Quotation Mark</td>
+			<td>&#x201c;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x201d;</td>
+			<td>&#x201d;</td>
+			<td>u+201d</td>
+			<td>Ayeri Right Quotation Mark</td>
+			<td>&#x201d;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&#x203c;</td>
+			<td>&#x203c;</td>
+			<td>u+203c</td>
+			<td>Ayeri Emphatic exclamation mark</td>
+			<td>&#x203c;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</table>
+		<p>The reason that some characters appear so often here is compatibility e.g. with word processors like LibreOffice. Plus, <em>Tahano Hikamu</em> uses e.g. simply a dash or a colon where the Latin alphabet would use a couple of different punctuation marks. Redundancy in those cases is for convenience.</p>
+		
+		<h3 id="abbreviations">2.10. Abbreviations</h3>
+		
+		<table class="charset" cellspacing="0">
+		<tr>
+			<th colspan="2">Character</th>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Normal</th>
+			<th>Key</th>
+		</tr>
+		<tr>
+			<td>&#x0026;</td>
+			<td>&#x0026;</td>
+			<td>u+0026</td>
+			<td>Ayeri abbreviation nay</td>
+			<td>&#x0026;</td>
+			<td><tt>&</tt></td>
+		</tr>
+		<tr>
+			<td>&#x002b;</td>
+			<td>&#x002b;</td>
+			<td>u+002b</td>
+			<td>Ayeri Abbreviation Naynay</td>
+			<td>&#x002b;</td>
+			<td><tt>+</tt></td>
+		</tr>
+		</table>
+	
+		<h2 id="key-macros">3. Key Macros Used by the Font</h2>
+		<p>A number of characters can be entered by means of a chain of keys, that is, <em>Tagāti Book G</em> has an input method engine already built in for convenience – or out of megalomania. It is important to note that Graphite is not supported by the majority of applications, except for the handful listed on the <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_apps" target="_blank">SIL Website</a>. Most notably, those are derivatives of OpenOffice.org and Mozilla Firefox.</p>
+		
+		<table class="key-macros" cellspacing="0">
+			<tr>
+				<th style="width: 10em">Key combination</th>
+				<th style="width: 2em">Output</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><tt>a</tt><tt>u</tt></td>
+				<td>*&#xa737;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>a</tt></td>
+				<td>*&#x0300;</td>
+				<td rowspan="6">The underscore <tt>_</tt> followed by a vowel character generates a bottom vowel. Unfortunately, this does not yet work for the schwa vowel.</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>e</tt></td>
+				<td>*&#x0301;</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>i</tt></td>
+				<td>*&#x0302;</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>o</tt></td>
+				<td>*&#x0303;</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>u</tt></td>
+				<td>*&#x0304;</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>a</tt><tt>u</tt></td>
+				<td>*&#x0306;</td>
+			</tr>
+			<tr>
+				<td><tt>A</tt><tt>U</tt></td>
+				<td>&#xa736;</td>
+				<td>Capital <tt>A</tt> followed by capital <tt>U</tt> generates the initial vowel ‹au›.</td>
+			</tr>
+			<tr>
+				<td><tt>a</tt><tt>a</tt></td>
+				<td>*&#x00af;</td>
+				<td rowspan="6">Double vowels generate the vowel itself plus a length mark. Unfortunately, this does not yet work for the schwa vowel.</td>
+			</tr>
+			<tr>
+				<td><tt>e</tt><tt>e</tt></td>
+				<td>*e&#x00af;</td>
+			</tr>
+			<tr>
+				<td><tt>i</tt><tt>i</tt></td>
+				<td>*i&#x00af;</td>
+			</tr>
+			<tr>
+				<td><tt>o</tt><tt>o</tt></td>
+				<td>*o&#x00af;</td>
+			</tr>
+			<tr>
+				<td><tt>u</tt><tt>u</tt></td>
+				<td>*u&#x00af;</td>
+			</tr>
+			<tr>
+				<td><tt>a</tt><tt>a</tt><tt>u</tt><tt>u</tt></td>
+				<td>*&#xa737;&#x00af;</td>
+			</tr>
+			<tr>
+				<td><tt>A</tt><tt>A</tt><tt>U</tt><tt>U</tt></td>
+				<td>&#xa736;&#x00af;</td>
+				<td>Capital <tt>A</tt><tt>A</tt> followed by capital <tt>U</tt><tt>U</tt> generates the initial long vowel ‹au› consequently.</td>
+			</tr>
+			<tr>
+				<td><tt>p</tt><tt>F</tt><tt>p</tt></td>
+				<td>pFp</td>
+				<td rowspan="3"><tt>CONS 1</tt><tt>F</tt><tt>CONS 1</tt> generates the <tt>CONS 1</tt> with a gemination mark.</td>
+			</tr>
+			<tr>
+				<td><tt>t</tt><tt>F</tt><tt>t</tt></td>
+				<td>tFt</td>
+			</tr>
+			<tr>
+				<td>etc.</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td><tt>n</tt><tt>n</tt></td>
+				<td>nn</td>
+				<td>The ‹na-na› ligature forms automatically.
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>F</tt></td>
+				<td>*_F</td>
+				<td>A top-attaching gemination mark in turn can be made by hand, should it be needed.</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>M</tt></td>
+				<td>*_M</td>
+				<td>The same goes for a top-attaching nasalization mark.</td>
+			</tr>
+			<tr>
+				<td><tt>_</tt><tt>:</tt></td>
+				<td>*_:</td>
+				<td>The ‘systematic vowel alteration’ (or simply put, <em>umlaut</em>) diacritic can be entered manually as well.</td>
+			</tr>
+			<tr>
+				<td><tt>F</tt><tt>y</tt></td>
+				<td>*Fy</td>
+				<td>This is the long way to get the ‘syllalbe-final ya bottom’ diacritic.</td>
+			</tr>
+		</table>
+		
+		<h2 id="input-order">4. Input Order</h2>
+		<p>For most purposes, diacritics order themselves automatically, so it should be possible to enter most of them in their logical order – rather than their graphical order, so even preposed diacritics or diacritics shifted in front of a consonant are to be entered after the syllalbe onset consonant. Here are some examples:</p>
+		
+		<blockquote class="example">
+			<p><tt>t</tt><tt>e</tt> → <span class="tagatibookg">te</span> ‹te›</p>
+			<p><tt>t</tt><tt>e</tt><tt>_</tt><tt>a</tt> → <span class="tagatibookg">te_a</span> ‹tea›</p>
+			<p><tt>t</tt><tt>e</tt><tt>e</tt><tt>_</tt><tt>a</tt> → <span class="tagatibookg">tee_a</span> ‹tēa›</p>
+			<p><tt>t</tt><tt>Y</tt><tt>e</tt><tt>e</tt><tt>_</tt><tt>a</tt> → <span class="tagatibookg">tYee_a</span> ‹tyēa›</p>
+			<p><tt>t</tt><tt>H</tt><tt>Y</tt><tt>e</tt><tt>e</tt><tt>_</tt><tt>a</tt> → <span class="tagatibookg">tHYee_a</span> ‹thyēa›</p>
+			<p><tt>t</tt><tt>R</tt><tt>H</tt><tt>Y</tt><tt>e</tt><tt>e</tt><tt>_</tt><tt>a</tt> → <span class="tagatibookg">tRHYee_a</span> ‹ṭhyēa›</p>
+			<p><tt>t</tt><tt>R</tt><tt>H</tt><tt>Y</tt><tt>e</tt><tt>e</tt><tt>j</tt> → <span class="tagatibookg">tRHYeej</span> ‹ṭhyēy›</p>
+			<p><tt>[</tt><tt>t</tt><tt>R</tt><tt>H</tt><tt>Y</tt><tt>e</tt><tt>e</tt><tt>j</tt><tt>]</tt> → <span class="tagatibookg">[tRHYeej]</span> ‹Ṭhyēy›</p>
+		</blockquote>
+		<p>There are, however, still problems with the glottal stop diacritic:</p>
+		<blockquote class="example">
+			<p><tt>k</tt><tt>i</tt> → <span class="tagatibookg">ki</span> ‹ki›</p>
+			<p><tt>k</tt><tt>i</tt><tt>Q</tt> → <span class="tagatibookg">kiQ</span> ‹kiʔ›</p>
+			<p><tt>k</tt><tt>i</tt><tt>Q</tt><tt>M</tt> → <span class="tagatibookg">kiQM</span> ‹kĩʔ›</p>
+			<p><tt>k</tt><tt>Q</tt><tt>i</tt><tt>i</tt><tt>M</tt> → <span class="tagatibookg">kQiiM</span> ‹kĩĩʔ›</p>
+		</blockquote>
+		<p>It is possible to include up to ten diacritics per syllable this way. Placing preposed diacritics manually may require you to use the Zero Width Non-Joiner (ZWNJ) to voluntarily cut the string analyzing Graphite does. A ZWNJ is automatically inserted in front of every syllable block already in order to provide flexibility while preventing Graphite from overapplying reordering rules so that diacritics end up in neighboring syllables.</p>
+		
+		<h2 id="software used">5. Software used</h2>
+		<ul>
+			<li><strong>Adobe Illustrator CS3</strong> to create the characters. I chose to use this proprietary software in order to draw the characters, since Inkscape – the go-to for Open-Source vector graphics – would not trace pens along paths as I wanted to: It turns the "pen" along the direction of the path, instead of just tracing it as you would with a nibbed pen.</li>
+			<li><strong>Fontforge</strong> to create the font files.</li>
+			<li><strong>Graphite</strong> to give the functionality to the font.</li>
+			<li><strong>TTFAutohint</strong> to make things look a little smoother on screen in Windows.</li>
+		</ul>
+	</div> <!-- body -->
+</body>
+
+</html>

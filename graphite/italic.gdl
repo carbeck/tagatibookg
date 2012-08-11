@@ -1,0 +1,515 @@
+/**********************************************************
+ *                                                        *
+ *     GRAPHITE FEATURE FILE FOR TAGĀTI BOOK ITALIC       *
+ *                  Carsten Becker, 2012                  *
+ *                                                        *
+ *                Last changed: 2012-08-11                *
+ *                                                        *
+ **********************************************************/
+
+#include "stddef.gdh"
+
+AutoPseudo = 1;
+
+environment {
+	MUnits = 1024;
+}
+
+#define TOPSEQ [ AnyTopDia [ AnyTopDia [ AnyTopDia [ AnyTopDia [ AnyTopDia ]? ]? ]? ]? ]?
+#define BOTSEQ [ AnyBotDia [ AnyBotDia [ AnyBotDia [ AnyBotDia [ AnyBotDia ]? ]? ]? ]? ]?
+#define PRESEQ [ clsDiaPre [ clsDiaPre [ clsDiaPre [ clsDiaPre [ clsDiaPre ]? ]? ]? ]? ]?
+#define BOTRTPRESEQ [ clsDiaBotRtPre [ clsDiaBotRtPre [ clsDiaBotRtPre [ clsDiaBotRtPre [ clsDiaBotRtPre ]? ]? ]? ]? ]?
+#define ANYDIASEQ [ AnyDia [ AnyDia [ AnyDia [ AnyDia [ AnyDia [ AnyDia [ AnyDia [ AnyDia [ AnyDia [ AnyDia ]? ]? ]? ]? ]? ]? ]? ]? ]? ]?
+
+#define attached user1
+#define isbotdia user2
+
+/*** GLYPH DEFINITIONS ***/
+
+table(glyph)
+
+	/* The letter name/function in the comment after every definition *
+	 * is followed by the associated key on the Latin keyboard, if    *
+	 * there is one: The font uses the Latin part in Unicode, mostly. */
+
+	gNA = (
+		U+006E,	// NA (key: n)
+		U+00D1,	// NA-SHORT > contextual variant of NA
+		U+00F1	// NA-LIG > contextual variant of NA
+	) {
+		botAnchMid = point(0m, -200m); // no place in the middle under NA!
+		botAnchRight = point(0m, 0m);
+		topAnch = point(75m, 470m);
+	}; // gNA
+	
+	gKA = (U+006B) {	// KA (key: k)
+		botAnchMid = point(bb.width/2, -128m);
+		botAnchRight = point(342m, 0m);
+		topAnch = point(114m, 470m);
+	}; //gKA
+	
+	gCHA = (U+0043) {	// CHA (key: C)
+		botAnchMid = point(342m, -128m);
+		botAnchRight = point(342m, 0m);
+		topAnch = point(171m, 470m);
+	}; // gCHA
+	
+	gMAYA = (
+		U+006D,	// MA (key: m)
+		U+0079	// YA (key: y)
+	) {
+		botAnchMid = point(171m, -128m);
+		botAnchRight = point(385m, 0m);
+		topAnch = point(171m, 470m);
+	}; // gMAYA
+	
+	gHA = (U+0068) {	// HA (key: h)
+		botAnchMid = point(342m, -128m);
+		botAnchRight = point(780m, 0m);
+		topAnch = point(342m, 470m);
+	}; // gHA
+	
+	clsConsHook100 = (
+		U+0053,	// SHA (key: S)
+		U+0058,	// KHA (key: X)
+		U+0064,	// DA (key: d)
+		U+0070,	// PA (key: p)
+		U+0072,	// RA (key: r)
+		U+0073,	// SA (key: s)
+		U+0074,	// TA (key: t)
+		U+0076	// VA (key: v)
+	) {
+		botAnchMid = point(171m, -128m);
+		botAnchRight = point(342m, 0m);
+		topAnch = point(171m, 470m);
+	}; // clsConsHook100
+	
+	clsConsHook200 = (
+		U+0047,	// GHA (key: G)
+		U+004E,	// NGA (key: N)
+		U+0054,	// TSA (key: T)
+		U+005A,	// ZHA (key: Z)
+		U+0066,	// FA (key: f)
+		U+006C,	// LA (key: l)
+		U+0077,	// WA (key: w)
+		U+007A	// ZA (key: z)
+	) {
+		botAnchMid = point(342m, -128m);
+		botAnchRight = point(684m, 0m);
+		topAnch = point(342m, 470m);
+	}; // clsConsHook200
+	
+	clsConsNoHook100 = (
+		U+002A, // dummy consonant character (dotted circle; key: *)
+		U+0062,	// BA (key: b)
+		U+0067,	// GA (key: g)
+		U+0294	// 'A
+	) {
+		botAnchMid = point(171m, -128m);
+		botAnchRight = point(342m, 0m);
+		topAnch = point(171m, 470m);
+	}; // clsConsNoHook100
+	
+	clsConsNoHook200 = (
+		U+0071,	// KWA (key: q)
+		U+0078	// KSA (key: x)
+	) {
+		botAnchMid = point(342m, -128m);
+		botAnchRight = point(684m, 0m);
+		topAnch = point(342m, 470m);
+	}; // clsConsNoHook200
+	
+	clsVwlCap = (	
+		U+0041,	// A- (key: A)
+		U+0045,	// E- (key: E)
+		U+0049,	// I- (key: I)
+		U+004F,	// O- (key: O)
+		U+0055,	// U- (key: U)
+		U+018F,	// Ə- (key: Ə)
+		U+A736	// AU-
+	) {
+		botAnchRight = point(342m, 0m);
+		botAnchMid = point(171m, -128m);
+		topAnch = point(bb.width/2, bb.height + 128m);
+	}; // clsVwlCap
+	
+	clsCons = (	
+		gNA,
+		gKA,
+		gCHA,
+		gMAYA,
+		gHA,
+		clsConsHook100,
+		clsConsHook200,
+		clsConsNoHook100,
+		clsConsNoHook200,
+		clsVwlCap
+	); // clsCons
+	
+	clsVwlTop = (
+		U+0061,	// -A- (key: a)
+		U+0065,	// -E- (key: e)
+		U+0069,	// -I- (key: i)
+		U+006F,	// -O- (key: o)
+		U+0075,	// -U- (key: u)
+		U+0259,	// -Ə- (key: ə)
+		U+A737	// -AU-
+	) {
+		topAnch = point(0m, bb.top + 114m);
+		botAnch = point(0m, bb.bottom - 114m);
+		attGeneric = point(0m, 0m);
+	}; // clsVwlTop
+	
+	clsVwlBot = (
+		U+0300,	// -A
+		U+0301,	// -E
+		U+0302,	// -I
+		U+0303,	// -O
+		U+0304,	// -U
+		U+0305,	// -Ə
+		U+0306	// -AU
+	) {
+		topAnch = point(0m, bb.top + 114m);
+		botAnch = point(0m, bb.bottom - 114m);
+		attGeneric = point(0m, 0m);
+	}; // clsVwlBot
+	
+	gDiaYA = (U+0059) {	// -YA (BOTTOM) (key: Y)
+		topAnch = point(0m, 0m);
+		botAnch = point(bb.left, -428m);
+		attGeneric = point(0m, 0m);
+	}; // gDiaYA
+	
+	gDiaNameEnd = (U+005D) {	// END NAME (BOTTOM) (key: ])
+		attGeneric = point(0m, 0m);
+	}; // gDiaNameEnd
+	
+	gDiaLong = (U+00AF) {	// VOWEL LENGTH (BOTTOM)
+		topAnch = point(0m, 0m);
+		botAnch = point(bb.left + 85m, -370m);
+		attGeneric = point(0m, 0m);
+	}; // gDiaLong
+	
+	gDiaAsp = (U+0048) {	// VOWEL LENGTH (BOTTOM)
+		topAnch = point(0m, 0m);
+		botAnch = point(bb.left + 171m, -670m);
+		attGeneric = point(0m, 0m);
+	}; // gDiaAsp
+	
+	gDiaPal = (U+004A) {	// PALATALIZATION (BOTTOM) (key: J)
+		topAnch = point(0m, 0m);
+		botAnch = point(bb.left + 114m, -542m);
+		attGeneric = point(0m, 0m);
+	}; // gDiaPal
+	
+	clsDiaBotRight = (
+		gDiaYA, gDiaNameEnd,
+		gDiaAsp, gDiaLong, gDiaPal
+	); // clsDiaBotRight
+	
+	clsDiaBotRightNotNameEnd = (
+		gDiaYA,
+		gDiaAsp, gDiaLong, gDiaPal
+	); //clsDiaBotRightNotNameEnd
+	
+	gDiaGltBot = (U+02C0) {	// GLOTTALIZATION (BOTTOM)
+		topAnch = point(0m, 0m);
+		botAnch = point(0m, -285m);
+		attGeneric = point(0m, 0m);
+	}; // gDiaGltBot
+	
+	clsDiaBotMidNotGlt = (
+		U+0046,	// VIRAMA (BOTTOM) (key: F)
+		U+004D,	// NASALIZATION (BOTTOM) (key: M)
+		U+0313	// GEMINATION (BOTTOM)
+	) {
+		topAnch = point(0m, bb.top + 114m);
+		botAnch = point(0m, bb.bottom - 114m);
+		attGeneric = point(0m, 0m)
+	}; // clsDiaBotMidNotGlt
+	
+	clsDiaBotMid = (
+		clsDiaBotMidNotGlt,
+		gDiaGltBot
+	); // clsDiaBotMid
+	
+	clsDiaBotRtPre = (
+		U+02B0,	// ASPIRATION (PRE)
+		U+02B2,	// PALATALIZATION (PRE)
+		U+02B2, // -YA (PRE)
+		U+02D0	// VOWEL LENGTH (PRE)	
+	); // clsDiaBotRtPre
+	
+	clsDiaPre = (
+		clsDiaBotRtPre,
+		U+006A, // RISING DIPHTHONG (key: j)
+		U+00A8, // SYSTEMATIC VOWEL CHANGE (UMLAUT)
+		U+0052	// RETROFLEX (key: R)
+	); // clsDiaPre
+	
+	clsDiaTop = (
+		U+0051,	// GLOTTALIZATION (TOP) (key: Q)
+		U+0310,	// NASALIZATION (TOP)
+		U+0311,	// VIRAMA (TOP)
+		U+0314,	// GEMINATION (TOP)
+		U+0315	// END NAME (TOP)
+	) {
+		topAnch = point(0m, bb.top + 114m);
+		botAnch = point(0m, bb.bottom - 114m);
+		attGeneric = point(0m, 0m)
+	}; // clsDiaTop
+	
+	AnyDia = ( clsDiaBotRight, clsDiaBotMid, clsDiaTop, clsVwlTop, clsVwlBot );
+	AnyDiaNotGltBot = ( clsDiaBotRight, clsDiaBotMidNotGlt, clsDiaTop, clsVwlTop, clsVwlBot );
+	AnyTopDia = ( clsDiaTop, clsVwlTop );
+	AnyBotMidDia = ( clsDiaBotMid, clsVwlBot );
+	AnyBotMidDiaNotGlt = ( clsDiaBotMidNotGlt, clsVwlBot );
+	AnyBotDia = ( clsDiaBotMid, clsVwlBot, clsDiaBotRight );
+	AnyBotDiaNotNameEnd = ( clsDiaBotMid, clsVwlBot, clsDiaBotRightNotNameEnd );
+	AnyVirama = ( U+0311, U+0046, U+0312 ); // over, under, after
+	
+	NoDesc = ( U+006E, U+004E, U+0076, U+0077, U+0071 ); // NA, NGA, VA, WA, KWA
+	
+	WithDesc = (
+		gKA, gCHA,
+		U+0053, U+0058, U+0064, U+0070, U+0072, U+0073, U+0074, // from clsConsHook100
+		U+0047, U+0054, U+005A, U+0066, U+006C, U+007A, // from clsConsHook200
+		U+002A, U+0062, U+0067, U+006D, U+0079, U+0294, // from clsConsNoHook100
+		U+0068, U+0078 // from clsConsNoHook200
+	) // WithDesc
+	
+	WithAsc = ( U+006B, U+0064, U+0043 ); // KA, DA, CHA
+	
+	ZWNJ = U+200C;
+	
+	
+	/*** KERNING CLASSES ***/
+	
+	// These characters have a serif at the top left. This adds 86px on the right.
+	krnHk100 = ( U+0030, U+0031, U+0032, U+0033, U+0053, U+0058, U+0070, U+0072, U+0073, U+0074, U+0076 );
+	krnHk200 = ( U+0043, U+0047, U+004E, U+0054, U+005A, U+0066, U+006C, U+0077, U+007A );
+	
+	// These characters don't have a serif at the top left
+	krnNoHk000 = ( U+02B0 );
+	krnNoHk067 = ( U+006A, U+00A8, U+02B2, U+02D0, U+0052 );
+	krnNoHk100 = ( U+0034, U+0036, U+0037, U+0041, U+0045, U+0049, U+004F, U+0055, U+0062, U+0067, U+006B, U+006D, U+018F, U+0294, U+A736 );
+	krnNoHk125 = ( U+004F );
+	krnNoHk200 = ( U+0068, U+0071, U+0078 );
+	
+	krnHk = ( krnHk100, krnHk200 );
+	krnHkSm = ( U+0035, U+0039, U+0064, U+0079, U+0038, U+00F1, U+00D1, U+006E );
+	krnNoHk = ( krnNoHk000, krnNoHk067, krnNoHk100, krnNoHk125 );
+	
+	// These characters have round top-right parts
+	krnRd = ( U+0032, U+0072, U+0073, U+0076, U+00B2, U+0054, U+005A, U+0077, U+007A, U+0036, U+0041, U+0045, U+0049, U+004F, U+0055, U+018F, U+0294, U+A736, U+004F, U+0071, U+0078 );
+	
+	// These characters have angular top-right parts
+	krnAng = ( U+00F1, U+00D1, U+006E, U+02B0, U+006A, U+00A8, U+02B2, U+02D0, U+0052, U+0030, U+0031, U+0033, U+0035, U+0039, U+0058, U+0070, U+0074, U+0047, U+004E, U+0066, U+006C, U+0034, U+0037, U+0062, U+0067, U+006D, U+0079, U+0068 );
+	
+	// These characters are special on the right (da, ka, cha)
+	krnSpc = ( U+0064, U+006B, U+0043 );
+		
+endtable; // glyph
+
+
+/*** ORDERING AND SUBSTITUTION DEFINITIONS ***/
+
+table(sub)
+	
+	pass(1) // Keyboard input mangling stuff
+	
+		// We insert a ZWNJ in front of every syllable for security purposes. This may be 
+		// slightly hackish, but it prohibits some bugs where pre-diacritics get inserted 
+		// in the syllable before the consonant they modify. For some weird reason.
+		_ clsCons > ZWNJ:2 @2:2;
+	
+		// a + u => au
+		U+0041 U+0055 > ZWNJ U+A736;			// A + U > AU-
+		U+0061 U+0075 > _ (U+A737):(1 2);		// a + u > -au-
+		U+005F U+0061 U+0075 > _ _ U+0306:(1 2 3);	// _ + a + u > vowel + au
+		
+		// Double vowels to long vowels
+		U+0061 U+0061 > _ U+00AF:(1 2); // aa > ā
+		U+0065 U+0065 _ > _ @2:(1 2) U+00AF:(1 2); // ee > ē
+		U+0069 U+0069 _ > _ @2:(1 2) U+00AF:(1 2); // ii > ī
+		U+006F U+006F _ > _ @2:(1 2) U+00AF:(1 2); // oo > ō
+		U+0075 U+0075 _ > _ @2:(1 2) U+00AF:(1 2); // uu > ū
+		U+0259 U+0259 _ > _ @2:(1 2) U+00AF:(1 2); // əə > ə̄
+		U+0061 U+0061 U+0075 U+0075 _ > _ _ _ U+A737:(1 2 3 4) U+00AF:(1 2 3 4); // aauu > a͞u
+		
+		U+0041 U+0041 > @1 U+00AF; // AA > Ā
+		U+0045 U+0045 > @1 U+00AF; // EE > Ē
+		U+0049 U+0049 > @1 U+00AF; // II > Ī
+		U+004F U+004F > @1 U+00AF; // OO > Ō
+		U+0055 U+0055 > @1 U+00AF; // UU > Ū
+		U+018F U+018F > @1 U+00AF; // ƏƏ > Ə̄
+		U+0041 U+0041 U+0055 U+0055 > _ _ U+A736:(1 2 3) U+00AF; // AAUU > A͞U
+		
+		// Underscore (U+005F) + clsVwlTop => clsVwlBot
+		U+005F clsVwlTop > _ clsVwlBot:(1 2);
+		
+		// Underscore (U+005F) + F => Virama Top
+		U+005F U+0046 > _ U+0311:(1 2);
+		
+		// Underscore (U+005F) + M => Nasalization Top
+		U+005F U+004D > _ U+0310:(1 2);
+		
+		// Underscore (U+005F) + : => Umlaut diacritic
+		U+005F U+003A > _ U+00A8:(1 2);
+		
+		// double consonant > gemination diacritic (U+0313)
+		// This is fugly, but there's no way to automatize this in GDL :(
+		U+0070 AnyVirama U+0070 > @1:(1 2) _ U+0313; // PA
+		U+0074 AnyVirama U+0074 > @1:(1 2) _ U+0313; // TA
+		gKA AnyVirama gKA > @1:(1 2) _ U+0313; // KA
+		U+0062 AnyVirama U+0062 > @1:(1 2) _ U+0313; // BA
+		U+0064 AnyVirama U+0064 > @1:(1 2) _ U+0313; // DA
+		U+0067 AnyVirama U+0067 > @1:(1 2) _ U+0313; // GA
+		U+006D AnyVirama U+006D > @1:(1 2) _ U+0313; // MA
+		gNA AnyVirama gNA > @1:(1 2) _ U+0313; // NA
+		U+004E AnyVirama U+004E > @1:(1 2) _ U+0313; // NGA
+		U+0076 AnyVirama U+0076 > @1:(1 2) _ U+0313; // VA
+		U+0073 AnyVirama U+0073 > @1:(1 2) _ U+0313; // SA
+		U+0068 AnyVirama U+0068 > @1:(1 2) _ U+0313; // HA
+		U+0072 AnyVirama U+0072 > @1:(1 2) _ U+0313; // RA
+		U+006C AnyVirama U+006C > @1:(1 2) _ U+0313; // LA
+		U+0079 AnyVirama U+0079 > @1:(1 2) _ U+0313; // YA
+		U+0294 AnyVirama U+0294 > @1:(1 2) _ U+0313; // 'A
+		U+0066 AnyVirama U+0066 > @1:(1 2) _ U+0313; // FA
+		U+0054 AnyVirama U+0054 > @1:(1 2) _ U+0313; // TSA
+		gCHA AnyVirama gCHA > @1:(1 2) _ U+0313; // CHA
+		U+0071 AnyVirama U+0071 > @1:(1 2) _ U+0313; // KWA
+		U+0078 AnyVirama U+0078 > @1:(1 2) _ U+0313; // KSA
+		U+0058 AnyVirama U+0058 > @1:(1 2) _ U+0313; // KHA
+		U+0077 AnyVirama U+0077 > @1:(1 2) _ U+0313; // WA
+		U+0047 AnyVirama U+0047 > @1:(1 2) _ U+0313; // GHA
+		U+007A AnyVirama U+007A > @1:(1 2) _ U+0313; // ZA
+		U+0053 AnyVirama U+0053 > @1:(1 2) _ U+0313; // SHA
+		U+005A AnyVirama U+005A > @1:(1 2) _ U+0313; // ZHA
+		U+002A AnyVirama U+002A > @1:(1 2) _ U+0313; // dummy consonant character (dotted circle; key: *)
+		
+		// Retroflex diacritic (U+0052) always in front of consonants
+		_ U+0052 > @4:4 _ / _ clsCons clsDiaBotMid? _;
+		
+		// Glottalization sub-diacritic (U+02C0) under da (U+0064) and ka (U+006B)
+		U+0051 > U+02C0 / (U+0064, U+006B) ANYDIASEQ _;
+
+	endpass;
+	
+	pass(2) // Do simple adjustment stuff
+		
+		// cha, da, ka have vowels under them and virama in the vowel's place
+		WithAsc TOPSEQ AnyBotDia > @1 @2 @3 @4 @5 @6 @7 { isbotdia = true }; // Raise flag (@2 .. @6 corresponds to TOPSEQ)
+		_ clsVwlTop > U+0311:8 clsVwlBot:8 / WithAsc TOPSEQ _ _ [AnyDia { isbotdia == false }]?; // If flag is not matched, replace.
+		
+		// Bottom-mid diacritics must be *pre*ceded by top vowels
+		AnyBotMidDia clsVwlTop > @7:7 @1 / _ BOTSEQ _;
+	
+	endpass;
+	
+	pass(3) // Diacritic reordering, Pt. 1
+		
+		// Bottom-right diacritics can only be *suc*ceeded by mid-bottom diacritics, not preceded by them!
+		AnyBotMidDiaNotGlt clsDiaBotRight > @7 @1 / _ TOPSEQ _;
+	
+		// Cons + Virama + YA + Top Stuff? + Bottom Stuff? => Cons + Top Stuff? + -ya + Bottom Stuff?
+		clsCons AnyVirama ZWNJ U+0079 > @1 _ _ U+0059:(2 3 4);
+		
+	endpass;
+		
+	pass(4) // Diacritic reordering, Pt. 2
+
+		// Umlaut diacritic (U+00A8) always in front of a stack of prediacritics and stuff
+		_ U+00A8 > @18:18 _ / _ PRESEQ clsCons ANYDIASEQ _;
+	
+	endpass;
+	
+	pass(5) // Diacritic reordering, Pt. 3
+	
+		// Only one bottom-right attaching diacritic allowed, the rest is stacked as
+		// pre-diacritic in front of consonants but behind vowel-alterating pre-diacritics
+		// with reversed directionality (i.e. the rule needs to walk the cursor backwards).
+		_ (U+0048 U+004A U+0059 U+00AF)=D > (U+02B0 U+02B2 U+02B2 U+02D0)$D:16 _ / ^ _ BOTRTPRESEQ U+0052? WithDesc (clsDiaBotRight, gDiaGltBot) AnyBotMidDia? TOPSEQ _;
+		
+		// Do the same for characters with no descenders, but *always* stack bottom-right
+		// diacritics in front.
+		_ (U+0048 U+004A U+0059 U+00AF)=D > (U+02B0 U+02B2 U+02B2 U+02D0)$D:14 _ / ^ _ BOTRTPRESEQ U+0052? NoDesc TOPSEQ _;
+	
+	endpass;
+	
+	pass(6) // Diacritic reordering, Pt. 4
+
+		// Diphthong diacritic (U+006A) always in front of the consonant and any pre-diacritics
+		_ U+006A > @18:18 _ / _ PRESEQ clsCons ANYDIASEQ _;
+			
+	endpass;
+
+	pass(7) // Do contextual stuff with na
+	
+		// Make nana ligature (U+006E > U+00F1)
+		U+006E > U+00F1 / _ TOPSEQ BOTSEQ ZWNJ U+006E;
+		
+		// No bottom-right diacritics on a consonant following na, unless there's one pre-diacritic.
+		// E.g. na pa long_sub => na long_pre pa; but na pa ya_sub long_sub => na long_pre pa ya_sub, as usual.
+		_ (U+0048 U+004A U+0059 U+00AF)=D > (U+02B0 U+02B2 U+02B2 U+02D0)$D:20 _ / gNA ANYDIASEQ ZWNJ _ clsCons TOPSEQ _;
+		
+		// Use short na before name-end, top glottal-stop or before diphthong sign
+		U+006E > U+00D1 / _ TOPSEQ BOTSEQ ZWNJ? (U+005D, U+006A, U+0051);
+		
+		// Virama and stuff over na, not under na
+		(U+0046, U+004D, U+0313, U+005D)=dia > (U+0311, U+0310, U+0314, U+0315)$dia / gNA TOPSEQ BOTSEQ _; // virama, nasalization, gemination, name-closing
+		
+	endpass;
+	
+	pass(8) // Name-end diacritic and glottal stop diacritic corrections
+	
+		// Top-attaching name-end (U+0315) after consonants with no descender and if there's a bottom-right diacritic in the way.
+		// Also correct order with top diacritics then.
+		_ U+005D > U+0315:D _ / (NoDesc, clsDiaBotRight) _ TOPSEQ BOTSEQ _=D;
+		
+		// Do the same for the top-attaching glottal stop diacritic.
+		_ U+0051 > @D _ / (NoDesc, clsDiaBotRight) _ TOPSEQ BOTSEQ _=D;
+		
+	endpass;
+
+endtable; // sub
+
+
+/*** POSITIONING DEFINITIONS ***/
+
+table(pos)
+
+	// A two-pass solution is certainly not as elegant as the one-pass solution described on the
+	// Graphite GDL snippets site, but at least it works, even though it costs precious time.
+
+	pass(1) // First-level attachment: consonant + diacritic
+	
+		clsCons AnyTopDia { attach { to=@1; at=topAnch; with=attGeneric }; attached = 1 } / ^ _ BOTSEQ _ { attached == 0 };
+		clsCons AnyBotMidDia { attach { to=@1; at=botAnchMid; with=attGeneric; }; attached = 1 } / ^ _ TOPSEQ _ { attached == 0 };
+		clsCons clsDiaBotRight { attach { to=@1; at=botAnchRight; with=attGeneric }; attached = 1 } / ^ _ TOPSEQ _ { attached == 0 };
+
+	endpass;
+	
+	pass(2) // Second-level attachment: diacritic + diacritic
+	
+		AnyTopDia AnyTopDia { attach { to=@1; at=topAnch; with=attGeneric }; attached = 1 } / ^ _ BOTSEQ _ { attached == 0 };
+		AnyBotDiaNotNameEnd AnyBotMidDia { attach { to=@1; at=botAnch; with=attGeneric }; attached = 1 } / ^ _ TOPSEQ _ { attached == 0 };
+
+	endpass;
+	
+	pass(3) // Kerning stuff
+	
+		krnNoHk { kern.x = -40m } / (krnRd, krnAng) ANYDIASEQ _;
+		krnNoHk { kern.x = -60m } / krnSpc ANYDIASEQ _;
+		krnHk { kern.x = 60m } / krnAng ANYDIASEQ _;
+		krnHkSm { kern.x = 20m } / krnAng ANYDIASEQ _;
+		krnHk { kern.x = 80m } / krnSpc ANYDIASEQ _;
+		krnHkSm { kern.x = 40m } / krnSpc ANYDIASEQ _;
+		clsCons { kern.x = -(@C.bb.width - @D.bb.width) + 15m } / U+006A _=C TOPSEQ U+00AF=D;
+		AnyBotMidDiaNotGlt { shift.x = -@D.bb.width - @C.bb.right + @C.botAnchMid.x; shift.y = @C.botAnchMid.y } / clsCons=C ANYDIASEQ gDiaNameEnd=D _;
+
+	endpass;
+	
+endtable; // pos
+
+endenv;
