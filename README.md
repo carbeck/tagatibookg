@@ -6,9 +6,9 @@ A font for my fictional writing system [Tahano Hikamu](http://benung.nfshost.com
 Installing
 ----------
 
-On Windows, you need to copy the `.ttf` files to `C:\Windows\Fonts`. In Linux, fonts installed on a per-user level exist in `~/.fonts`.
+On Windows, you need to copy the files `Tagati Book Regular G.ttf` and `Tagati Book Italic G.ttf` to `C:\Windows\Fonts`. In Linux, fonts installed on a per-user level exist in `~/.fonts`.
 
 Important Note
 --------------
 
-*Tagāti Book G* uses [SIL Graphite](http://graphite.sil.org) to manage all the nifty diacritic attachment and character reordering, not OpenType. This means, that the range of applications you can use the font in will be rather limited, unfortunately. You can't avoid tradeoffs unfortunately.
+*Tagāti Book G* uses [SIL Graphite](http://graphite.sil.org) to manage all the nifty diacritic attachment and character reordering, not OpenType. This means that the range of applications you can use the font in will be rather limited, unfortunately. You can't avoid tradeoffs.
