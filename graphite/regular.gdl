@@ -3,7 +3,7 @@
  *     GRAPHITE FEATURE FILE FOR TAGĀTI BOOK REGULAR      *
  *                  Carsten Becker, 2012                  *
  *                                                        *
- *                Last changed: 2012-08-13                *
+ *                Last changed: 2012-08-14                *
  *                                                        *
  **********************************************************/
 
@@ -429,7 +429,7 @@ table(sub)
 		
 		// No bottom-right diacritics on a consonant following na, unless there's one pre-diacritic.
 		// E.g. na pa long_sub => na long_pre pa; but na pa ya_sub long_sub => na long_pre pa ya_sub, as usual.
-		_ (U+0048 U+004A U+0059 U+00AF)=D > (U+02B0 U+02B2 U+02B2 U+02D0)$D:21 _ / gNA ANYDIASEQ U+0020 ZWNJ _ clsCons TOPSEQ _;
+		_ (U+0048 U+004A U+0059 U+00AF)=D > (U+02B0 U+02B2 U+02B2 U+02D0)$D:21 _ / gNA ANYDIASEQ U+0020? ZWNJ _ clsCons TOPSEQ _;
 		
 		// Use short na before name-end, top glottal-stop or before diphthong sign
 		U+006E > U+00D1 / _ TOPSEQ BOTSEQ ZWNJ? (U+005D, U+006A, U+0051);
