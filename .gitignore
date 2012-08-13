@@ -1,2 +1,5 @@
 *.*~
 *.zip
+dbg_*.txt
+*.gdx
+$_temp.gdl
