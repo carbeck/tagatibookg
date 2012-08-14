@@ -1,5 +1,6 @@
-*.*~
+*~
 *.zip
 dbg_*.txt
 *.gdx
+gdlerr.txt
 $_temp.gdl
