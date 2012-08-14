@@ -1,4 +1,11 @@
+2012-08-14 - version 1.2
+========================
+
+* Fixed a naming clash with the Italic version.
+
+
 2012-08-13 - version 1.1
+========================
 
 * Fixed issue 1: No diacritic transformation on a consonant following na + space
 * Fixed issue 2: No diacritic transformation on an initial vowel character

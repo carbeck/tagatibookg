@@ -1,7 +1,7 @@
 SplineFontDB: 3.0
-FontName: TagatiBookItalic
-FullName: Tagati Book Italic
-FamilyName: Tagati Book
+FontName: TagatiBookG-Italic
+FullName: Tagati Book G Italic
+FamilyName: Tagati Book G
 Weight: Book
 Copyright: Created by Carsten Becker 2012. CC-BY-NC-SA. http://benung.nfshost.com.
 Version: 001.000
@@ -20,7 +20,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1335707501
-ModificationTime: 1344892646
+ModificationTime: 1344930293
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -77,7 +77,7 @@ ShortTable: maxp 16
   2
   2
 EndShort
-LangName: 1033 "" "" "" "FontForge : Tagati Book Italic : 31-7-2012" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "ANF kmynF pr dgAs vl, bhu tY!" 
+LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "ANF kmynF pr dgaasF vl, bhu tY!" 
 GaspTable: 1 65535 2 0
 Encoding: UnicodeBmp
 Compacted: 1
@@ -87,6 +87,8 @@ DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
 WinInfo: 32 16 4
+BeginPrivate: 0
+EndPrivate
 BeginChars: 65538 118
 
 StartChar: .notdef
