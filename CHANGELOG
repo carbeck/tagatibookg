@@ -1,18 +1,18 @@
+2012-08-21 - version 1.2.5
+==========================
+* Added 'tahanohikamu.html'
+* Changed 'readme.html' accordingly
+
 2012-08-14 - version 1.2
 ========================
-
 * Fixed a naming clash with the Italic version.
-
 
 2012-08-13 - version 1.1
 ========================
-
 * Fixed issue 1: No diacritic transformation on a consonant following na + space
 * Fixed issue 2: No diacritic transformation on an initial vowel character
 * Fixed issue in 'Tagati Book Italic.ttf': U+0051 now has proper spacing on the right, too.
 
-
 2012-08-11 - version 1.0
 ========================
-
 * Upload to GitHub

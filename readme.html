@@ -154,7 +154,7 @@
 	<div class="header">
 		<h1>Tagāti Book G</h1>
 		<p><strong>A Font for the <a href="http://benung.nfshost.com/alphabet" target="_blank">Tahano Hikamu</a> Writing System Enabled with <a href="http://graphite.sil.org" target="_blank">SIL Graphite</a></strong></p>
-		<p>Carsten Becker, 11 August 2012<br />
+		<p>Last modified: Carsten Becker, 21 August 2012<br />
 		<em>christianus<span class="x">_blah_</span>&#x002E;<span class="x">_all_this_obfuscation_tsk_tsk_</span>pistorius<span class="x">_removethis_</span>&#x0040;<span class="x">_and_this_too_</span>gmail<span class="x">_this_as_well_</span>&#x002E;<span class="x">_removethis_</span>com</em><br />
 		 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" taget="_blank">CC-BY-NC-SA 3.0 License</a></p>
 	</div>
@@ -165,9 +165,10 @@
 		<p>This is a True Type font for my fictional writing system <span class="tagatibookg">thno hikmu</span> <em>Tahano Hikamu</em>, which was inspired by writing systems of the Asian subcontinent, especially Brahmic scripts. I made the font in order to be able to typeset things in my script on the computer as well so that it would not be necessary to use pen, paper, and a scanner every time I want to produce something digital in it.</p>
 		<p><em>Tagāti Book G</em> has been released under a Creative Commons license that grants you a lot of freedom because according to my own experience, people involved in the fictional language community on the internet are always very curious about how to make fonts for their own fictional languages and their respective writing systems. Since font-making is a very complex task, I hope to provide a useful insight into how I made this font by fully disclosing its sources. My own design and coding are certainly far from perfect, so if there is anything to improve or optimize, you're invited to help correcting those issues. The sources can be found on Github, <a href="http://www.github.com/carbeck/tagatibookg" target="_blank">http://www.github.com/carbeck/tagatibookg</a>.</p>
 		<p><em>Tahano Hikamu</em> is a very complex script even for a Brahmic-inspired <em>abugida</em> in that there is a lot of diacritic stacking and character reordering involved, occasionally also against the primary left-to-right writing direction. The decision to program those complex features into the TTF files with Graphite was made because earlier attempts with just OpenType – which is far more widespread – were unsatisfying, since it would be too restricted in its support of features, especially for a fictional script that is not just a mere rip-off of an existing one.</p>
+		<p>Note that in order to see all characters in this file correctly, you need to use a browser that supports <em>@font-face</em> and the <em>Tagāti Book G</em> TTF files need to be located in the same directory as this file; alternatively, you need to have the TTF files provided by this font package installed wherever your operating system normally keeps fonts. Furthermore, you need a browser that supports SIL Graphite (to date only Mozilla Firefox from version 11 on), which may need to be activated first – SIL International provides a <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_firefox" target="_blank">description for how to do that</a> in Mozilla Firefox.</p>
 		
 		<h2 id="charset">2. Character Set</h2>
-		<p><em>Tagāti Book G</em> (ab)uses much of the “Latin-1” area in Unicode to make input with a regular Western keyboard as easy as possible. How the script works is described in detail at <a href="http://benung.nfshost.com/alphabet" target="_blank">Benung. The Ayeri Language Resource.</a> The following charts give the characters in both <em>hikamu</em> ‘round’ (Regular) and <em>hinyan</em> ‘angular’ (Italic) style – if you have the fonts installed or can dynamically load them from your browser.</p>
+		<p><em>Tagāti Book G</em> (ab)uses much of the “Latin-1” area in Unicode to make input with a regular Western keyboard as easy as possible. How the script works is described in detail in <a href="tahanohikamu.html" target="_blank">the <em>tahanohikamu.html</em> file</a>. The following charts give the characters in both <em>hikamu</em> ‘round’ (Regular) and <em>hinyan</em> ‘angular’ (Italic) style – if you have the fonts installed or can dynamically load them from your browser.</p>
 		
 		<h3 id="consonants">2.1. Consonants</h3>
 		
@@ -1342,7 +1343,7 @@
 		<ul>
 			<li><strong>Adobe Illustrator CS3</strong> to create the characters. I chose to use this proprietary software in order to draw the characters, since Inkscape – the go-to for open-source vector graphics – would not trace pens along paths as I wanted to: Inkscape turns the “pen” around in the direction of the path as it follows it, instead of just tracing it as you would with a nibbed pen.</li>
 			<li><strong>Fontforge</strong> to create the font files.</li>
-			<li><strong>Graphite</strong> to give the functionality to the font.</li>
+			<li><strong>Graphite</strong> to give proper functionality to the font.</li>
 			<li><strong>TTFAutohint</strong> to make things look a little smoother on screen in Windows.</li>
 		</ul>
 	</div> <!-- body -->
